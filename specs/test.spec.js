@@ -23,7 +23,7 @@ describe('mounted test component', () => {
   test('html matches snapshot with default prop value', () => {
     const wrapper = mount(TestComponent)
 
-    expect(wrapper.html()).toMatchSnapshot()
+    expect(wrapper).toMatchSnapshot()
   })
 
   test('html matches snapshot with default prop value', () => {
@@ -33,16 +33,19 @@ describe('mounted test component', () => {
       }
     })
 
-    expect(wrapper.html()).toMatchSnapshot()
+    expect(wrapper).toMatchSnapshot()
   })
 })
 
 describe('list component', () => {
-  test('mount', () => {
+  test('html lists existing movie data plus any added data', () => {
     const wrapper = mount(ListComponent)
+    const movies = wrapper.vm.marvelMovies
+    wrapper.setData({ marvelMovies: [ ...movies, 'Endgame' ] })
+    expect(wrapper).toMatchSnapshot()
   })
 
-  test('shallow mount', () => {
-    const wrapper = shallowMount(ListComponent)
-  })
+  /* test('shallow mount', () => { */
+  /*   const wrapper = shallowMount(ListComponent) */
+  /* }) */
 })
