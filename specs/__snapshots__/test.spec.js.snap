@@ -10,33 +10,13 @@ exports[`list component html lists existing movie data plus any added data 1`] =
 </div>
 `;
 
-exports[`list component lists existing movie data plus any added data 1`] = `
-<div>
-  <ul>
-    <li><strong>Iron Man</strong></li>
-    <li><strong>Avengers</strong></li>
-    <li><strong>Infitinity War</strong></li>
-  </ul>
-</div>
-`;
-
-exports[`list component mount 1`] = `
-<div>
-  <ul>
-    <li><strong>Iron Man</strong></li>
-    <li><strong>Avengers</strong></li>
-    <li><strong>Infitinity War</strong></li>
-  </ul>
-</div>
-`;
-
 exports[`mounted test component html matches snapshot with default prop value 1`] = `
 <div>
   <h1>Hello Test</h1>
 </div>
 `;
 
-exports[`mounted test component html matches snapshot with default prop value 2`] = `
+exports[`mounted test component html matches snapshot with given prop value 1`] = `
 <div>
   <h1>Hello You</h1>
 </div>

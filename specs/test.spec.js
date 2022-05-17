@@ -1,6 +1,6 @@
 import TestComponent from '@/test.vue'
 import ListComponent from '@/list.vue'
-import { mount, shallowMount } from '@vue/test-utils'
+import { mount } from '@vue/test-utils'
 
 describe('mounted test component', () => {
 
@@ -26,7 +26,7 @@ describe('mounted test component', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  test('html matches snapshot with default prop value', () => {
+  test('html matches snapshot with given prop value', () => {
     const wrapper = mount(TestComponent, {
       propsData: {
         value: 'You'
@@ -44,8 +44,4 @@ describe('list component', () => {
     wrapper.setData({ marvelMovies: [ ...movies, 'Endgame' ] })
     expect(wrapper).toMatchSnapshot()
   })
-
-  /* test('shallow mount', () => { */
-  /*   const wrapper = shallowMount(ListComponent) */
-  /* }) */
 })
