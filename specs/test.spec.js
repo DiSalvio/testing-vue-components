@@ -1,6 +1,6 @@
 import TestComponent from '@/test.vue'
 import ListComponent from '@/list.vue'
-import { mount } from '@vue/test-utils'
+import { shallowMount, mount } from '@vue/test-utils'
 
 describe('mounted test component', () => {
 
@@ -42,6 +42,20 @@ describe('list component', () => {
     const wrapper = mount(ListComponent)
     const movies = wrapper.vm.marvelMovies
     wrapper.setData({ marvelMovies: [ ...movies, 'Endgame' ] })
+    expect(wrapper).toMatchSnapshot()
+  })
+
+  test('shallow Mount', () => {
+    const ListItemStub = {
+      template: `<li>{{ movie }}</li>`,
+      props: ['movie']
+    }
+
+    const wrapper = shallowMount(ListComponent, {
+      stubs: {
+        ListItem: ListItemStub
+      }
+    })
     expect(wrapper).toMatchSnapshot()
   })
 })

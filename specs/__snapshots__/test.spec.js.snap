@@ -10,6 +10,16 @@ exports[`list component html lists existing movie data plus any added data 1`] =
 </div>
 `;
 
+exports[`list component shallow Mount 1`] = `
+<div>
+  <ul>
+    <li>Iron Man</li>
+    <li>Avengers</li>
+    <li>Infitinity War</li>
+  </ul>
+</div>
+`;
+
 exports[`mounted test component html matches snapshot with default prop value 1`] = `
 <div>
   <h1>Hello Test</h1>
