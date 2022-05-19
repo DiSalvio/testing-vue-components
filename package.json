@@ -11,6 +11,7 @@
     "@vue/test-utils": "^1.3.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^24.5.0",
+    "faker": "^6.6.6",
     "jest": "^24.5.0",
     "jest-serializer-vue": "^2.0.2",
     "vue": "^2.6.9",
@@ -21,5 +22,8 @@
   "scripts": {
     "test": "jest",
     "watch": "jest --watch"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^6.3.1"
   }
 }
