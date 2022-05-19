@@ -7,7 +7,7 @@
     <h2>Tasks</h2>
     <ul>
       <li v-for="(task, index) in tasks" :key="task">
-        {{ task }}
+        <span>{{ task }}</span>
         <button @click="remove(index)">Done</button>
       </li>
     </ul>
